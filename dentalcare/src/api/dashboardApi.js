@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.PROD
+  ? "https://smilecraft-api-q1y5.onrender.com/api"
+  : "http://localhost:5000/api";
+
 const API = axios.create({
-
-  baseURL: "https://smilecraft-api-q1y5.onrender.com/api",
-
+  baseURL: API_BASE_URL,
 });
 
 API.interceptors.request.use((config) => {

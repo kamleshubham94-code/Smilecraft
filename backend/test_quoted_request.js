@@ -2,7 +2,11 @@ const t = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDFiMmMzZDRlNWY2Nzg5
 
 (async () => {
   try {
-    const res = await fetch('https://smilecraft-api-q1y5.onrender.com/api/appointments/test', {
+    const BASE_URL = process.env.NODE_ENV === 'production'
+      ? 'https://smilecraft-api-q1y5.onrender.com/api/appointments/test'
+      : 'http://localhost:5000/api/appointments/test';
+
+    const res = await fetch(BASE_URL, {
       headers: { authorization: `"Bearer ${t}"` },
     });
     console.log('status', res.status);
