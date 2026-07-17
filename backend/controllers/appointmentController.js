@@ -11,6 +11,8 @@ export const createAppointment = async (req, res) => {
     const {
       fullName,
       email,
+      age,
+      gender,
       phone,
       doctor,
       treatment,
@@ -22,6 +24,8 @@ export const createAppointment = async (req, res) => {
     if (
       !fullName ||
       !email ||
+      !age ||
+      !gender ||
       !phone ||
       !doctor ||
       !treatment ||
@@ -36,23 +40,19 @@ export const createAppointment = async (req, res) => {
 
     }
 
-    const appointment =
-      await Appointment.create({
-
-        patient: req.user.id,
-
-        fullName,
-  email,
-  age,
-  gender,
-  phone,
-  doctor,
-  treatment,
-  appointmentDate,
-  appointmentTime,
-  message,
-
-      });
+    const appointment = await Appointment.create({
+      patient: req.user.id,
+      fullName,
+      email,
+      age,
+      gender,
+      phone,
+      doctor,
+      treatment,
+      appointmentDate,
+      appointmentTime,
+      message,
+    });
 
     res.status(201).json({
 

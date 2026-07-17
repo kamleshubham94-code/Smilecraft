@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import patientRoutes from "./routes/patientRoutes.js";
 import connectDB from "./config/db.js";
+import bcrypt from "bcryptjs";
+import User from "./models/User.js";
 
 import authRoutes from "./routes/authRoutes.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
@@ -53,6 +55,80 @@ app.get("/", (req, res) => {
 
 });
 
+
+app.get("/seed-admin", async (req, res) => {
+
+  try {
+
+    // Secret key protection
+    if (req.query.key !== "Smilecraft2026") {
+
+      return res.status(401).json({
+
+        success: false,
+        message: "Unauthorized",
+
+      });
+
+    }
+
+    const existingAdmin = await User.findOne({
+
+      email: "admin@gmail.com",
+
+    });
+
+    if (existingAdmin) {
+
+      return res.json({
+
+        success: true,
+        message: "Admin already exists",
+
+      });
+
+    }
+
+    const hashedPassword = await bcrypt.hash(
+
+      "123456",
+      10
+
+    );
+
+    await User.create({
+
+      fullName: "Administrator",
+
+      email: "admin@gmail.com",
+
+      password: hashedPassword,
+
+      role: "admin",
+
+    });
+
+    res.json({
+
+      success: true,
+      message: "Admin created successfully",
+
+    });
+
+  } catch (err) {
+
+    console.error(err);
+
+    res.status(500).json({
+
+      success: false,
+      message: err.message,
+
+    });
+
+  }
+
+});
 /* ============================
    404 Handler
 ============================ */
