@@ -1,0 +1,199 @@
+/* ===========================
+   ABOUT PAGE
+=========================== */
+
+.about-page{
+    background:#F8FAFC;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.about-hero{
+
+    padding:100px 20px;
+
+    background:linear-gradient(
+    135deg,
+    #ECFDF5,
+    #FFFFFF,
+    #FFF7ED);
+
+}
+
+.about-container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.about-container h1{
+
+    font-size:52px;
+
+    color:#1E293B;
+
+    font-weight:700;
+
+}
+
+.about-line{
+
+    width:100px;
+
+    height:4px;
+
+    background:#FF8F00;
+
+    margin:22px auto;
+
+    border-radius:50px;
+
+}
+
+.about-container p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   ABOUT CONTENT
+=========================== */
+
+.about-section{
+
+    padding:100px 0;
+
+}
+
+.about-content{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/* IMAGE */
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* TEXT */
+
+.about-text h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.about-line-small{
+
+    width:90px;
+
+    height:4px;
+
+    background:#FF8F00;
+
+    margin:22px 0;
+
+    border-radius:40px;
+
+}
+
+.about-text p{
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+    margin-bottom:24px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.about-content{
+
+grid-template-columns:1fr;
+
+}
+
+.about-text{
+
+text-align:center;
+
+}
+
+.about-line-small{
+
+margin:20px auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.about-hero{
+
+padding:70px 20px;
+
+}
+
+.about-container h1{
+
+font-size:38px;
+
+}
+
+.about-text h2{
+
+font-size:32px;
+
+}
+
+}

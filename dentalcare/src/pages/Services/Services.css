@@ -1,0 +1,205 @@
+/* ===========================
+   SERVICES PAGE
+=========================== */
+
+.services-page {
+  background: #f8fafc;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.services-hero {
+  background: linear-gradient(135deg, #ecfdf5, #ffffff, #fff7ed);
+  padding: 100px 20px;
+}
+
+.services-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.services-header {
+  text-align: center;
+}
+
+.services-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.services-line {
+  width: 100px;
+  height: 4px;
+  background: #ff8f00;
+  margin: 20px auto;
+  border-radius: 50px;
+}
+
+.services-header p {
+  max-width: 750px;
+  margin: auto;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ===========================
+   SERVICES SECTION
+=========================== */
+
+.services-section {
+  padding: 80px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.service-card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: all .35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   CARD TOP
+=========================== */
+
+.service-top {
+  background: linear-gradient(135deg,#2E7D32,#FF8F00);
+  color: white;
+  padding: 40px;
+}
+
+.service-icon {
+  width: 75px;
+  height: 75px;
+  background: rgba(255,255,255,.18);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+}
+
+.service-top h2 {
+  margin-top: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.duration {
+  margin-top: 10px;
+  opacity: .9;
+  font-size: 16px;
+}
+
+/* ===========================
+   CARD BODY
+=========================== */
+
+.service-body {
+  padding: 35px;
+}
+
+.service-body p {
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features {
+  margin-top: 30px;
+}
+
+.features div {
+  margin-bottom: 14px;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.book-btn {
+  margin-top: 35px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ff8f00;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.book-btn:hover {
+  background: #2E7D32;
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px){
+
+  .services-grid{
+      grid-template-columns:1fr;
+  }
+
+}
+
+@media (max-width:768px){
+
+.services-hero{
+
+padding:70px 20px;
+
+}
+
+.services-header h1{
+
+font-size:38px;
+
+}
+
+.service-top{
+
+padding:30px;
+
+}
+
+.service-body{
+
+padding:25px;
+
+}
+
+}

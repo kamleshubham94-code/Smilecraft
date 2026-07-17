@@ -1,0 +1,11 @@
+.notfound-page {
+  min-height: 100vh;
+}
+
+.notfound-page h1 {
+  letter-spacing: -0.06em;
+}
+
+.notfound-page .return-button {
+  transition: background-color 0.3s ease;
+}

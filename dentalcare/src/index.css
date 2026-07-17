@@ -1,0 +1,258 @@
+/* ======================================================
+   GOOGLE FONT
+====================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ======================================================
+   RESET
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:
+        background .35s ease,
+        color .35s ease;
+}
+
+/* ======================================================
+   LIGHT THEME
+====================================================== */
+
+:root{
+
+    /* Backgrounds */
+
+    --bg:#f8fafc;
+    --surface:#ffffff;
+    --card:#ffffff;
+
+    /* Text */
+
+    --text:#1e293b;
+    --text-light:#64748b;
+
+    /* Brand */
+
+    --primary:#15803d;
+    --primary-hover:#166534;
+
+    --secondary:#f97316;
+    --secondary-hover:#ea580c;
+
+    /* Border */
+
+    --border:#e2e8f0;
+
+    /* Sidebar */
+
+    --sidebar:#166534;
+    --sidebar-hover:#15803d;
+
+    /* Shadows */
+
+    --shadow:
+        0 15px 40px rgba(15,23,42,.08);
+
+}
+
+/* ======================================================
+   DARK THEME
+====================================================== */
+
+body.dark{
+
+    /* Backgrounds */
+
+    --bg:#0f172a;
+
+    --surface:#1e293b;
+
+    --card:#111827;
+
+    /* Text */
+
+    --text:#f8fafc;
+
+    --text-light:#cbd5e1;
+
+    /* Brand */
+
+    --primary:#22c55e;
+
+    --primary-hover:#16a34a;
+
+    --secondary:#fb923c;
+
+    --secondary-hover:#f97316;
+
+    /* Border */
+
+    --border:#334155;
+
+    /* Sidebar */
+
+    --sidebar:#020617;
+
+    --sidebar-hover:#1e293b;
+
+    /* Shadow */
+
+    --shadow:
+        0 15px 40px rgba(0,0,0,.45);
+
+}
+
+/* ======================================================
+   COMMON ELEMENTS
+====================================================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+input,
+textarea,
+select{
+
+    font-family:inherit;
+
+    transition:.3s;
+
+}
+
+/* ======================================================
+   INPUTS
+====================================================== */
+
+input,
+textarea,
+select{
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(34,197,94,.12);
+
+}
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.card{
+
+    background:var(--card);
+
+    box-shadow:var(--shadow);
+
+    border-radius:20px;
+
+}
+
+/* ======================================================
+   SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ======================================================
+   TEXT SELECTION
+====================================================== */
+
+::selection{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+/* ======================================================
+   TRANSITIONS
+====================================================== */
+
+body,
+section,
+div,
+main,
+aside,
+nav,
+header,
+footer,
+input,
+textarea,
+button,
+select{
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}

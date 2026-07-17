@@ -1,0 +1,261 @@
+/* =====================================
+   PROFILE PAGE
+===================================== */
+
+.profile-page {
+  padding: 35px;
+  background: #f8fafc;
+  min-height: 100%;
+}
+
+/* =====================================
+   PROFILE CARD
+===================================== */
+
+.profile-card {
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.profile-header {
+  background: linear-gradient(
+      135deg,
+      #15803d,
+      #16a34a,
+      #f97316
+  );
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: white;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: white;
+  color: #15803d;
+  font-size: 46px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.profile-header h2 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.profile-header p {
+  color: rgba(255,255,255,.9);
+  font-size: 18px;
+}
+
+/* =====================================
+   SECTION
+===================================== */
+
+.profile-section {
+  padding: 40px;
+}
+
+.profile-section h3 {
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 30px;
+}
+
+/* =====================================
+   GRID
+===================================== */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-field.full-width {
+  grid-column: 1 / -1;
+}
+
+/* =====================================
+   LABEL
+===================================== */
+
+.profile-field label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #334155;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* =====================================
+   INPUT
+===================================== */
+
+.profile-field input,
+.profile-field select {
+  height: 55px;
+  border: 1px solid #dbe4ee;
+  border-radius: 14px;
+  padding: 0 18px;
+  font-size: 16px;
+  background: white;
+  transition: .3s;
+}
+
+.profile-field input:focus,
+.profile-field select:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 4px rgba(22,163,74,.12);
+}
+
+.profile-field input:disabled,
+.profile-field select:disabled {
+  background: #f8fafc;
+  color: #475569;
+  cursor: not-allowed;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 35px 40px;
+  border-top: 1px solid #edf2f7;
+}
+
+.profile-actions button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.edit-btn {
+  background: #f97316;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+.save-btn {
+  background: #15803d;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #166534;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:900px){
+
+.profile-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.profile-header{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.profile-actions{
+
+flex-direction:column;
+
+}
+
+.profile-actions button{
+
+width:100%;
+justify-content:center;
+
+}
+
+.profile-page{
+
+padding:20px;
+
+}
+
+.profile-section{
+
+padding:25px;
+
+}
+
+.profile-header{
+
+padding:30px;
+
+}
+
+.profile-avatar{
+
+width:90px;
+height:90px;
+font-size:36px;
+
+}
+
+.profile-header h2{
+
+font-size:28px;
+
+}
+
+}

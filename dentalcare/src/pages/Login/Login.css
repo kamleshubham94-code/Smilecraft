@@ -1,0 +1,390 @@
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+.login-page{
+    width:100%;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ECFDF5 0%,#FFFFFF 55%,#FFF7ED 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.login-container{
+    width:100%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#FFFFFF;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,.10);
+}
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.login-left{
+    background:linear-gradient(135deg,#2E7D32,#16A34A,#F97316);
+    color:#FFFFFF;
+    padding:70px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.login-logo{
+
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+.login-left h1{
+
+    font-size:44px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.login-left p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.9);
+
+}
+
+.login-features{
+
+    margin-top:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.login-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:17px;
+
+}
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.login-right{
+
+    padding:70px 60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.auth-card{
+
+    width:100%;
+
+    max-width:450px;
+
+}
+
+.auth-card h2{
+
+    font-size:38px;
+
+    color:#1E293B;
+
+    margin-bottom:10px;
+
+}
+
+.auth-card p{
+
+    color:#64748B;
+
+    margin-bottom:35px;
+
+    line-height:1.7;
+
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.auth-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.form-group label{
+
+    font-weight:600;
+
+    color:#1E293B;
+
+}
+
+.form-group input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus{
+
+    border-color:#2E7D32;
+
+    box-shadow:0 0 0 4px rgba(46,125,50,.12);
+
+}
+
+.auth-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:15px;
+
+}
+
+.auth-options a{
+
+    color:#2E7D32;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.auth-options a:hover{
+
+    color:#F97316;
+
+}
+
+.login-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#F97316;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#2E7D32;
+
+    transform:translateY(-3px);
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.auth-footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#64748B;
+
+}
+
+.auth-footer a{
+
+    color:#2E7D32;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.auth-footer a:hover{
+
+    color:#F97316;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+.login-container{
+
+grid-template-columns:1fr;
+
+}
+
+.login-left{
+
+display:none;
+
+}
+
+.login-right{
+
+padding:60px 40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.login-page{
+
+padding:40px 15px;
+
+}
+
+.login-right{
+
+padding:40px 25px;
+
+}
+
+.auth-card h2{
+
+font-size:32px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.auth-card h2{
+
+font-size:28px;
+
+}
+
+.login-right{
+
+padding:35px 20px;
+
+}
+
+.form-group input{
+
+padding:14px 16px;
+
+}
+
+.login-btn{
+
+padding:14px;
+
+}
+
+}
+
+.error-message{
+
+    color:#DC2626;
+
+    background:#FEE2E2;
+
+    border:1px solid #FECACA;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}

@@ -1,0 +1,353 @@
+/* ===========================================
+   SIDEBAR
+=========================================== */
+
+.sidebar{
+
+    width:290px;
+
+    min-height:100vh;
+
+    background:var(--sidebar);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    transition:.35s;
+
+    border-right:1px solid var(--border);
+
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.sidebar-header{
+
+    padding:35px 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar-logo{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:white;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.sidebar-header h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.sidebar-header p{
+
+    color:rgba(255,255,255,.7);
+
+    font-size:13px;
+
+}
+
+/* ===========================================
+   USER
+=========================================== */
+
+.sidebar-user{
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.user-avatar{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--secondary),
+        var(--primary)
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.sidebar-user h3{
+
+    margin-top:18px;
+
+    font-size:22px;
+
+}
+
+.sidebar-user span{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+/* ===========================================
+   MENU
+=========================================== */
+
+.sidebar-menu{
+
+    flex:1;
+
+    padding:25px 18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.sidebar-menu button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.sidebar-menu button svg{
+
+    font-size:20px;
+
+}
+
+.sidebar-menu button:hover{
+
+    background:var(--sidebar-hover);
+
+    transform:translateX(5px);
+
+}
+
+.sidebar-menu button.active{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.sidebar-footer{
+
+    padding:25px;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    background:#ef4444;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================================
+   DARK MODE
+=========================================== */
+
+body.dark .sidebar{
+
+    background:#020617;
+
+}
+
+body.dark .sidebar-header{
+
+    border-color:#1e293b;
+
+}
+
+body.dark .sidebar-user{
+
+    border-color:#1e293b;
+
+}
+
+body.dark .sidebar-menu button:hover{
+
+    background:#1e293b;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    width:240px;
+
+}
+
+.sidebar-header{
+
+    padding:25px 20px;
+
+}
+
+.sidebar-user{
+
+    padding:25px 20px;
+
+}
+
+.user-avatar{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:28px;
+
+}
+
+.sidebar-menu button{
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    z-index:999;
+
+}
+
+}

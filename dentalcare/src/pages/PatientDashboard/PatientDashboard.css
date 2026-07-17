@@ -1,0 +1,23 @@
+.patient-dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+}
+
+.dashboard-content{
+
+    flex:1;
+
+    padding:35px;
+
+    overflow:auto;
+
+    background:var(--bg);
+
+    transition:.35s;
+
+}

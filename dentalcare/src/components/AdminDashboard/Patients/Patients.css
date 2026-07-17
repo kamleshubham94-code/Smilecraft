@@ -1,0 +1,187 @@
+.patients-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.patients-header h2{
+
+    color:var(--text);
+
+    font-size:34px;
+
+}
+
+.patients-header p{
+
+    color:var(--text-light);
+
+    margin-top:8px;
+
+}
+
+.patient-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+.search-box{
+
+    width:350px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    background:transparent;
+
+    color:var(--text);
+
+    height:50px;
+
+}
+
+.table-container{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:var(--primary);
+
+}
+
+thead th{
+
+    color:white;
+
+    padding:18px;
+
+    text-align:left;
+
+}
+
+tbody td{
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+    color:var(--text-light);
+
+}
+
+tbody tr:hover{
+
+    background:rgba(34,197,94,.05);
+
+}
+
+.view-btn{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    margin-right:10px;
+
+    cursor:pointer;
+
+}
+
+.delete-btn{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ef4444;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.view-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+
+@media(max-width:768px){
+
+.search-box{
+
+width:100%;
+
+}
+
+.table-container{
+
+overflow-x:auto;
+
+}
+
+}

@@ -1,0 +1,197 @@
+/* ==========================
+   SIDEBAR
+========================== */
+
+.admin-sidebar{
+
+    width:280px;
+
+    min-height:100vh;
+
+    background:var(--sidebar);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    border-right:1px solid var(--border);
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.admin-sidebar-header{
+
+    padding:30px 24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.admin-logo{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:white;
+
+}
+
+.admin-sidebar-header h2{
+
+    font-size:24px;
+
+    margin-bottom:4px;
+
+}
+
+.admin-sidebar-header p{
+
+    color:rgba(255,255,255,.7);
+
+    font-size:13px;
+
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.admin-menu{
+
+    flex:1;
+
+    padding:25px 18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.admin-menu button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.admin-menu button svg{
+
+    font-size:20px;
+
+}
+
+.admin-menu button:hover{
+
+    background:var(--sidebar-hover);
+
+    transform:translateX(5px);
+
+}
+
+.admin-menu button.active{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.admin-sidebar-footer{
+
+    padding:24px;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    background:#ef4444;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+}

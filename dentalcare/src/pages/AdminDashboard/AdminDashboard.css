@@ -1,0 +1,21 @@
+.admin-dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+}
+
+.admin-content{
+
+    flex:1;
+
+    padding:35px;
+
+    background:var(--bg);
+
+    overflow:auto;
+
+}
