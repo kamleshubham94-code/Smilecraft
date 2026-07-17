@@ -21,7 +21,7 @@ import NotFound from "./pages/NotFound/NotFound";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
-import AuthProvider from "./context/AuthContext";
+import AuthProvider from "./Context/AuthContext";
 
 function App() {
   return (

@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 import { useTheme } from "../../../Context/ThemeContext";
-import { AuthContext } from "../../../context/AuthContext";
+import { AuthContext } from "../../../Context/AuthContext";
 
 function Settings() {
 

@@ -16,7 +16,7 @@ import {
 } from "react-icons/hi";
 
 import { useTheme } from "../../Context/ThemeContext";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../Context/AuthContext";
 
 function Navbar() {
 

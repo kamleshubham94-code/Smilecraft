@@ -10,7 +10,7 @@ import DashboardHome from "../../components/Dashboard/DashboardHome/DashboardHom
 import Appointments from "../../components/Dashboard/Appointments/Appointments";
 import Profile from "../../components/Dashboard/Profile/Profile";
 import Settings from "../../components/Dashboard/Settings/Settings";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../Context/AuthContext";
 
 function PatientDashboard() {
 
