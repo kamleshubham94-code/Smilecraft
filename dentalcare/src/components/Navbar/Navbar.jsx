@@ -49,7 +49,7 @@ function Navbar() {
 
       <div className="navbar__container">
 
-        {/* Logo */}
+        {/* ================= Logo ================= */}
 
         <Link
           to="/"
@@ -72,7 +72,7 @@ function Navbar() {
 
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* ================= Desktop Menu ================= */}
 
         <nav className="navbar__menu">
 
@@ -94,7 +94,7 @@ function Navbar() {
 
         </nav>
 
-        {/* Right Side */}
+        {/* ================= Right Side ================= */}
 
         <div className="navbar__actions">
 
@@ -115,14 +115,14 @@ function Navbar() {
 
               <Link
                 to="/login"
-                className="login-btn"
+                className="navbar-login-btn"
               >
                 Login
               </Link>
 
               <Link
                 to="/appointment"
-                className="book-btn"
+                className="navbar-book-btn"
               >
                 Book Appointment
               </Link>
@@ -139,14 +139,14 @@ function Navbar() {
 
               <Link
                 to="/patient-dashboard"
-                className="login-btn"
+                className="navbar-login-btn"
               >
                 Dashboard
               </Link>
 
               <Link
                 to="/appointment"
-                className="book-btn"
+                className="navbar-book-btn"
               >
                 Book Appointment
               </Link>
@@ -172,7 +172,7 @@ function Navbar() {
 
               <Link
                 to="/admin-dashboard"
-                className="book-btn"
+                className="navbar-book-btn"
               >
                 Admin Panel
               </Link>
@@ -192,7 +192,7 @@ function Navbar() {
 
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* ================= Mobile Toggle ================= */}
 
         <button
           className="navbar__mobile-toggle"
@@ -253,7 +253,7 @@ function Navbar() {
 
               <Link
                 to="/login"
-                className="login-btn"
+                className="navbar-login-btn"
                 onClick={closeMenu}
               >
                 Login
@@ -261,7 +261,7 @@ function Navbar() {
 
               <Link
                 to="/appointment"
-                className="book-btn"
+                className="navbar-book-btn"
                 onClick={closeMenu}
               >
                 Book Appointment
@@ -277,7 +277,7 @@ function Navbar() {
 
               <Link
                 to="/patient-dashboard"
-                className="login-btn"
+                className="navbar-login-btn"
                 onClick={closeMenu}
               >
                 Dashboard
@@ -285,7 +285,7 @@ function Navbar() {
 
               <Link
                 to="/appointment"
-                className="book-btn"
+                className="navbar-book-btn"
                 onClick={closeMenu}
               >
                 Book Appointment
@@ -308,7 +308,7 @@ function Navbar() {
 
               <Link
                 to="/admin-dashboard"
-                className="book-btn"
+                className="navbar-book-btn"
                 onClick={closeMenu}
               >
                 Admin Panel

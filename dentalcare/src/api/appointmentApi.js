@@ -13,14 +13,15 @@ API.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
 
   if (token) {
-
     config.headers.Authorization = `Bearer ${token}`;
-
   }
 
   return config;
-
 });
+
+/* ===========================
+   Patient
+=========================== */
 
 export const createAppointment = (data) =>
   API.post("/appointments", data);
@@ -28,11 +29,17 @@ export const createAppointment = (data) =>
 export const getMyAppointments = () =>
   API.get("/appointments/my");
 
-export const getAllAppointments = () =>
+/* ===========================
+   Admin
+=========================== */
+
+export const getAppointments = () =>
   API.get("/appointments");
 
-export const updateAppointmentStatus = (id, status) =>
+export const updateStatus = (id, status) =>
   API.put(`/appointments/${id}`, { status });
 
 export const deleteAppointment = (id) =>
   API.delete(`/appointments/${id}`);
+
+export default API;

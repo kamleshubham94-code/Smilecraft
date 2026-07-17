@@ -4,9 +4,13 @@ import { AuthContext } from "../Context/AuthContext";
 
 function ProtectedRoute({ children, allowedRole }) {
 
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
 
   const location = useLocation();
+
+  if (loading) {
+    return null;
+  }
 
   // User not logged in
   if (!user) {

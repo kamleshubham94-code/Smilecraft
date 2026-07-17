@@ -43,7 +43,7 @@ function PatientDashboard() {
 <main className="dashboard-content">
 
   {activePage === "dashboard" && (
-    <DashboardHome user={user} />
+    <DashboardHome user={user} setActivePage={setActivePage} />
   )}
 
   {activePage === "appointments" && (

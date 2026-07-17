@@ -2,21 +2,21 @@
    NAVBAR
 =================================================== */
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
 
-    background: rgba(255,255,255,.88);
-    backdrop-filter: blur(18px);
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(18px);
 
-    border-bottom: 1px solid var(--border);
+    border-bottom:1px solid var(--border);
 
-    transition: .35s ease;
+    transition:.3s;
 }
 
 body.dark .navbar{
-    background: rgba(15,23,42,.90);
+    background:rgba(15,23,42,.90);
 }
 
 /* ===================================================
@@ -27,11 +27,11 @@ body.dark .navbar{
 
     max-width:1400px;
 
+    height:82px;
+
     margin:auto;
 
     padding:0 35px;
-
-    height:82px;
 
     display:flex;
 
@@ -52,6 +52,8 @@ body.dark .navbar{
     align-items:center;
 
     gap:14px;
+
+    text-decoration:none;
 
 }
 
@@ -75,11 +77,11 @@ body.dark .navbar{
         var(--secondary)
     );
 
-    color:white;
+    color:#fff;
 
     font-size:24px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 
 }
 
@@ -87,11 +89,9 @@ body.dark .navbar{
 
     color:var(--text);
 
-    font-size:26px;
+    font-size:28px;
 
     font-weight:700;
-
-    transition:.3s;
 
 }
 
@@ -101,7 +101,7 @@ body.dark .navbar{
 
     font-size:13px;
 
-    margin-top:3px;
+    margin-top:2px;
 
 }
 
@@ -115,13 +115,15 @@ body.dark .navbar{
 
     align-items:center;
 
-    gap:35px;
+    gap:36px;
 
 }
 
 .nav-link{
 
     position:relative;
+
+    text-decoration:none;
 
     color:var(--text-light);
 
@@ -135,7 +137,7 @@ body.dark .navbar{
 
 .nav-link:hover{
 
-    color:var(--primary);
+    color:var(--secondary);
 
 }
 
@@ -175,7 +177,9 @@ body.dark .navbar{
 
     align-items:center;
 
-    gap:18px;
+    gap:14px;
+
+    flex-wrap:nowrap;
 
 }
 
@@ -193,7 +197,7 @@ body.dark .navbar{
 
     border-radius:50%;
 
-    background:var(--surface);
+    background:#fff;
 
     color:var(--primary);
 
@@ -203,9 +207,11 @@ body.dark .navbar{
 
     align-items:center;
 
+    cursor:pointer;
+
     font-size:20px;
 
-    box-shadow:var(--shadow);
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
 
     transition:.3s;
 
@@ -213,35 +219,51 @@ body.dark .navbar{
 
 .theme-btn:hover{
 
-    transform:rotate(25deg);
+    transform:rotate(20deg);
 
 }
 
 /* ===================================================
-   LOGIN
+   LOGIN / DASHBOARD BUTTON
 =================================================== */
 
-.login-btn{
+.navbar-login-btn{
 
-    padding:12px 24px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:160px;
+
+    height:50px;
+
+    padding:0 24px;
+
+    text-decoration:none;
+
+    background:#F97316;
+
+    color:#fff;
 
     border-radius:14px;
 
-    border:2px solid var(--primary);
-
-    color:var(--primary);
+    font-size:16px;
 
     font-weight:600;
+
+    white-space:nowrap;
 
     transition:.3s;
 
 }
 
-.login-btn:hover{
+.navbar-login-btn:hover{
 
-    background:var(--primary);
+    background:#EA580C;
 
-    color:white;
+    transform:translateY(-2px);
 
 }
 
@@ -249,31 +271,83 @@ body.dark .navbar{
    BOOK BUTTON
 =================================================== */
 
-.book-btn{
+.navbar-book-btn{
 
-    padding:13px 26px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:210px;
+
+    height:50px;
+
+    padding:0 24px;
+
+    text-decoration:none;
+
+    background:#2E7D32;
+
+    color:#fff;
 
     border-radius:14px;
 
-    background:linear-gradient(
-        135deg,
-        var(--secondary),
-        var(--secondary-hover)
-    );
-
-    color:white;
+    font-size:16px;
 
     font-weight:600;
 
-    box-shadow:0 10px 25px rgba(249,115,22,.25);
+    white-space:nowrap;
 
     transition:.3s;
 
 }
 
-.book-btn:hover{
+.navbar-book-btn:hover{
 
-    transform:translateY(-3px);
+    background:#256C2B;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===================================================
+   LOGOUT
+=================================================== */
+
+.navbar-logout-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#EF4444;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.navbar-logout-btn:hover{
+
+    background:#DC2626;
+
+    transform:translateY(-2px);
 
 }
 
@@ -285,13 +359,15 @@ body.dark .navbar{
 
     display:none;
 
-    border:none;
-
     background:none;
+
+    border:none;
 
     color:var(--text);
 
     font-size:34px;
+
+    cursor:pointer;
 
 }
 
@@ -307,64 +383,71 @@ body.dark .navbar{
 
 @media(max-width:1024px){
 
-.navbar__menu{
+    .navbar__menu{
 
-display:none;
+        display:none;
 
-}
+    }
 
-.navbar__actions{
+    .navbar__actions{
 
-display:none;
+        display:none;
 
-}
+    }
 
-.navbar__mobile-toggle{
+    .navbar__mobile-toggle{
 
-display:block;
+        display:block;
 
-}
+    }
 
-.navbar__mobile{
+    .navbar__mobile{
 
-display:flex;
+        display:flex;
 
-flex-direction:column;
+        flex-direction:column;
 
-padding:25px;
+        gap:18px;
 
-gap:20px;
+        padding:25px;
 
-background:var(--surface);
+        background:var(--surface);
 
-border-top:1px solid var(--border);
+        border-top:1px solid var(--border);
 
-}
+    }
 
-.navbar__container{
+    .navbar__mobile a,
+    .navbar__mobile button{
 
-padding:0 20px;
+        width:100%;
 
-}
+    }
 
 }
 
 @media(max-width:768px){
 
-.navbar__brand h2{
+    .navbar__container{
 
-font-size:22px;
+        padding:0 20px;
 
-}
+    }
 
-.navbar__logo{
+    .navbar__logo{
 
-width:48px;
+        width:48px;
 
-height:48px;
+        height:48px;
 
-font-size:22px;
+        font-size:20px;
 
-}
+    }
+
+    .navbar__brand h2{
+
+        font-size:22px;
+
+    }
 
 }

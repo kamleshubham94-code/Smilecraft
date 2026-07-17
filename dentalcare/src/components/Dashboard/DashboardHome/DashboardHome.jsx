@@ -1,5 +1,7 @@
 import "./DashboardHome.css";
 
+import { useNavigate } from "react-router-dom";
+
 import {
     FaCalendarAlt,
     FaUserMd,
@@ -7,7 +9,25 @@ import {
     FaSmile,
 } from "react-icons/fa";
 
-function DashboardHome({ user }) {
+function DashboardHome({ user, setActivePage }) {
+
+    const navigate = useNavigate();
+
+    const handleQuickAction = (action) => {
+        if (action === "book") {
+            navigate("/appointment");
+            return;
+        }
+
+        if (action === "appointments") {
+            setActivePage("appointments");
+            return;
+        }
+
+        if (action === "profile") {
+            setActivePage("profile");
+        }
+    };
 
     return (
 
@@ -166,22 +186,25 @@ function DashboardHome({ user }) {
 
                     <div className="quick-actions">
 
-                        <button className="quick-btn">
-
+                        <button
+                            className="quick-btn"
+                            onClick={() => handleQuickAction("book")}
+                        >
                             Book Appointment
-
                         </button>
 
-                        <button className="quick-btn">
-
+                        <button
+                            className="quick-btn"
+                            onClick={() => handleQuickAction("appointments")}
+                        >
                             View Appointments
-
                         </button>
 
-                        <button className="quick-btn">
-
+                        <button
+                            className="quick-btn"
+                            onClick={() => handleQuickAction("profile")}
+                        >
                             Update Profile
-
                         </button>
 
                     </div>

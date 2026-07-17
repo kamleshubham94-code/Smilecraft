@@ -280,7 +280,7 @@ function DashboardHome() {
 
         </div>
 
-        {/* Quick Actions */}
+        {/* Quick Actions 
 
 <div className="dashboard-card">
 
@@ -322,7 +322,7 @@ function DashboardHome() {
 
   </div>
 
-</div>
+</div>   */}
 
       </div>
 
